@@ -11,7 +11,9 @@ dns:
   enable: true
   listen: :1053
 {% endif %}
-
+proxies: ~
+proxy-groups: ~
+rules: ~
 {% endif %}
 {% if request.target == "surge" %}
 
