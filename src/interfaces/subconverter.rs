@@ -1273,6 +1273,9 @@ impl RuleBases {
         if let Some(args) = template_args {
             // Using template rendering
             info!("Applying template to rule base for {}", target.to_str());
+            info!("args {}", args);
+            info!("template_path {}", global.template_path);
+            info!("content {}", content);
             match crate::template::render_template(&content, args, &global.template_path) {
                 Ok(rendered) => {
                     debug!("Successfully rendered template for rule base");
